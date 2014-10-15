@@ -15,7 +15,7 @@ var React = require('react');
 var App = React.createClass({displayName: 'App',
 	render: function() {
 		return (
-			React.DOM.h1(null, "Hello world!")
+			React.DOM.h1(null, "Hi")
 		);
 	}
 	
