@@ -3,3 +3,9 @@
   background-color: #ddd !important;
   vertical-align: middle;
 }
+
+.btn-noborder {
+  color: #333;
+  background-color: #fff;
+  border-color: #fff;
+}
