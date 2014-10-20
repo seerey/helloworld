@@ -9,3 +9,7 @@
   background-color: #fff;
   border-color: #fff;
 }
+
+.extra-height {
+  min-height: 30px;
+}
