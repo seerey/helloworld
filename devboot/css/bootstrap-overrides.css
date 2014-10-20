@@ -1,0 +1,5 @@
+.table-solid td,
+.table-solid th {
+  background-color: #ddd !important;
+  vertical-align: middle;
+}

@@ -12,6 +12,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-overrides.css" rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
     <link href="css/offcanvas.css" rel="stylesheet">
@@ -52,71 +54,64 @@
     </div><!-- /.navbar -->
 
     <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
-          <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
-          </div>
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-plus"></span>
-          </button>
-          &nbsp;
-          <button type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-minus"></span>
-          </button>
-          <br/>
-          <div class="table-responsive">
-            <table class="table table-bordered table-condensed">
+      <div class="row"><!--row1-->
+        <div class="col-12">
+          <!--Large tablet/desktop-->
+          <div class="table-responsive visible-md visible-lg">
+            <table class="table table-solid table-condensed">
               <thead>
                 <tr>
                   <th></th>
-                  <th>Previous<br/>Achieved</th>
-                  <th>Previous<br/>Total</th>
-                  <th>Additional<br/>Achieved</th>
-                  <th>Additional<br/>Total</th>
-                  <th>New<br/>Achieved</th>
-                  <th>New<br/>Total</th>
+                  <th class="text-center">Previous<br/>Achieved</th>
+                  <th class="text-center">Previous<br/>Total</th>
+                  <th class="text-center">Additional<br/>Achieved</th>
+                  <th class="text-center">Additional<br/>Total</th>
+                  <th class="text-center">New<br/>Achieved</th>
+                  <th class="text-center">New<br/>Total</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Males 5 to 9</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>5</td>
-                  <td>6</td>
+                  <td align="right">Males 5 to 9</td>
+                  <td align="center">4</td>
+                  <td align="center">5</td>
+                  <td align="center">1</td>
+                  <td align="center">1</td>
+                  <td align="center">5</td>
+                  <td align="center">6</td>
                 </tr>
                 <tr>
-                  <td>Males 10 to 14</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>5</td>
-                  <td>6</td>
+                  <td align="right">Males 10 to 14</td>
+                  <td align="center">4</td>
+                  <td align="center">5</td>
+                  <td align="center">
+                    <button type="button" class="btn btn-default btn-sm">
+                      <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                    <input type="text" style="text-align: center" size="1">
+                    <button type="button" class="btn btn-default btn-sm">
+                      <span class="glyphicon glyphicon-minus"></span>
+                    </button>
+                  </td>
+                  <td align="center">1</td>
+                  <td align="center">5</td>
+                  <td align="center">6</td>
                 </tr>
                 <tr>
-                  <td>Males 15 to 24</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>5</td>
-                  <td>6</td>
+                  <td align="right">Males 15 to 24</td>
+                  <td align="center">4</td>
+                  <td align="center">5</td>
+                  <td align="center">1</td>
+                  <td align="center">1</td>
+                  <td align="center">5</td>
+                  <td align="center">6</td>
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div><!--lg and med table-->
 
-          <div class="table-responsive">
+          <!--Phone/mini tablet -->
+          <div class="table-responsive visible-xs visible-sm">
             <table class="table table-bordered table-condensed">
               <thead>
                 <tr>
@@ -149,73 +144,29 @@
             </table>
           </div>
 
-          <div class="row">
-            <div class="col-1">
-              <span>
+          <div>
+              <!-- <span> -->
                 <button type="button" class="btn btn-default btn-sm">
                   <span class="glyphicon glyphicon-minus"></span>
                 </button>
-                <input type="text" style="text-align: center">
+                <input type="text" class="form-control" style="text-align: center">
                 <button type="button" class="btn btn-default btn-sm">
                   <span class="glyphicon glyphicon-plus"></span>
                 </button>
-              </span>
+              <!-- </span> -->
             </div>
           </div>
-          <div class="row">
-            <div class="col-12">
+          <div>
+              <form role="form" class="form-inline">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+              </form>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-        </div><!--/span-->
-
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
-        </div><!--/span-->
-      </div><!--/row-->
+        </div><!--/col12-->
+      </div><!--/row1-->
 
       <hr>
 
