@@ -13,3 +13,11 @@
 .extra-height {
   min-height: 30px;
 }
+
+input:hover,
+input:active,
+{
+    outline:0px !important;
+    appearance: none;
+    -webkit-appearance:none;
+}
