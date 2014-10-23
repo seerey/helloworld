@@ -152,35 +152,51 @@
 
           <!--Phone -->
           <div class="visible-xs" style="margin-left: 4px; margin-right: 4px;">
-            <h3>Males 5 to 9</h3>
-            <div class="row">
-              <div class="col-xs-7 " style="font-size: 18px; text-align:middle;">
-                  Achieving
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                      Males 0 to 4
+                    </a>
+                    <span class="pull-right">0 / 0</span>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    Stuff for panel males 0 to 4
+                  </div>
+                </div>
               </div>
-              <div class="col-xs-3">
-                <button type="button" class="btn btn-default btn-sm ">
-                  <span class="glyphicon glyphicon-minus"></span>
-                </button>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                      Males 5 to 9
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Stuff for panel males 5 to 9
+                  </div>
+                </div>
               </div>
-              <div class="col-xs-3"  style="">
-                <button type="button" class="btn btn-default btn-sm">
-                  <span class="glyphicon glyphicon-plus"></span>
-                </button>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                      Males 10 to 14
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Stuff for panel males 10 to 14
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 input-group " style="margin-top: 10px;">
-                <span class="input-group-addon">1 + </span>
-                <input class="form-control" style="text-align: center;" type="number" min="0" inputmode="numeric" pattern="[0-9]*">
-                <span class="input-group-addon">= 4</span>
-
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-18" style="margin-top: 5px;">
-                <small class="text-muted">(previous + additional = new)</small>
-              </div>
-            </div>
+            </div><!--panel group - accordian-->
 
           </div><!--panel-->
           <!-- <div class="table-responsive visible-xs">
@@ -205,9 +221,7 @@
       </div>
       <hr>
 
-      <footer>
-        <p>&copy; Company 2014</p>
-      </footer>
+
 
     </div><!--/.container-->
 
