@@ -5,7 +5,7 @@
 html,
 body {
   /*Chad - commented out due to vertical clipping when not much content */
-  /*overflow-x: hidden;*/ /* Prevent scroll on narrow devices */
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 body {
   padding-top: 70px;
