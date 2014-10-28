@@ -21,3 +21,7 @@ input:active,
     appearance: none;
     -webkit-appearance:none;
 }
+
+.input-group-addon, .input-group-btn {
+  width: 0%;
+}
