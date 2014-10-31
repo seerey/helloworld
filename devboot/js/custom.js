@@ -1,21 +1,15 @@
 $(document).ready(function () {
+  
   $('input.form-control').on('input propertychange paste', function() {
     var dataNum = $(this).attr("data-num");
     var dataType = $(this).attr("data-type");
     var text = $(this).val();
     refreshTotals(dataNum, dataType, text);
+    event.stopPropagation();
   });
 
-  function refreshTotals(dataNum, dataType, text) {
-    var num = Number($("#collapse" + dataNum + dataType + "Prev").text());
-    if ($.isNumeric(num)) {
-      var num = num + Number(text);
-    }
-    $("#collapse" + dataNum + dataType + "Summary").text(num);
-    $("#collapse" + dataNum + dataType + "Inline").text(num);
-  }
 
-  $('button.btn').on("click", function() {
+  $('button.btn').on("click", function(event) {
     var dataNum = $(this).attr("data-num");
     var dataType = $(this).attr("data-type");
     var dataAction = $(this).attr("data-action");
@@ -32,7 +26,18 @@ $(document).ready(function () {
     $("#collapse" + dataNum + dataType + "Input").val(newNum);
 
     refreshTotals(dataNum, dataType, newNum)
+    event.stopPropagation();
   });
+
+
+  function refreshTotals(dataNum, dataType, text) {
+    var num = Number($("#collapse" + dataNum + dataType + "Prev").text());
+    if ($.isNumeric(num)) {
+      var num = num + Number(text);
+    }
+    $("#collapse" + dataNum + dataType + "Summary").text(num);
+    $("#collapse" + dataNum + dataType + "Inline").text(num);
+  }
 
 
 });

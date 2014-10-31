@@ -172,7 +172,7 @@ or more environmental issues confronting the community. </p>
                   </h4>
                 </div>
 
-                <div id="collapse1" class="panel-collapse collapse in">
+                <div id="collapse1" class="panel-collapse collapse">
                   <div class="panel-body">
                     <!--start Achieved-->
                     <div class="row">
@@ -218,20 +218,20 @@ or more environmental issues confronting the community. </p>
                       <form class="form" role="form">
                         <div class="form-group">
                           <div class="input-group">
-                            <div class="input-group-addon">1 + </div>
-                            <input class="form-control" value="4" style="text-align: center; width: 5em;" type="number" min="0" inputmode="numeric" pattern="[0-9]*">
-                            <div class="input-group-addon">= 5</div>
+                            <div class="input-group-addon"><span id="collapse1TotalPrev">1</span> + </div>
+                            <input class="form-control" id="collapse1TotalInput" data-type="Total" data-num="1" value="4" style="text-align: center; width: 5em;" type="number" min="0" inputmode="numeric" pattern="[0-9]*">
+                            <div class="input-group-addon"><span> = </span><span id="collapse1TotalInline">5</span></div>
                           </div>
                         </div>
                       </form>
                       </div>
                       <div class="col-xs-4 text-center">
-                        <button type="button" class="btn btn-default btn-md">
+                        <button type="button" class="btn btn-default btn-md" data-type="Total" data-num="1" data-action="-">
                           <span class="glyphicon glyphicon-minus"></span>
                         </button>
                       </div>
                       <div class="col-xs-4 text-center">
-                        <button type="button" class="btn btn-default btn-md">
+                        <button type="button" class="btn btn-default btn-md" data-type="Total" data-num="1" data-action="+">
                           <span class="glyphicon glyphicon-plus"></span>
                         </button>
                       </div>
@@ -244,29 +244,165 @@ or more environmental issues confronting the community. </p>
               </div>
               <div class="panel panel-default">
                 <div class="panel-heading"  data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" >
-                  <h4 class="panel-title">
+                  <h4 class="panel-title" >
                     <a data-toggle="collapse">
                       Males 5 to 9
                     </a>
+                    <span class="pull-right">
+                      <span id="collapse2AchievedSummary">4</span>
+                      <span> / </span>
+                      <span id="collapse2TotalSummary">5</span>
+                    </span>
                   </h4>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse">
                   <div class="panel-body">
-                    Stuff for panel males 5 to 9
+                      <!--start Achieved-->
+                    <div class="row">
+                      <div class="col-xs-24" style="margin-bottom: 7px; font-size: 16px;">
+                          <b>Achieved</b><br/>
+                          <small class="text-muted">(previous + additional = new)</small>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-16">
+                      <form class="form" role="form">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-addon"><span id="collapse2AchievedPrev">1</span> + </div>
+                            <input class="form-control" id="collapse2AchievedInput" data-type="Achieved" data-num="2" value="3" style="text-align: center; width: 5em;" min="0" max="999" type="number" min="0" inputmode="numeric" pattern="[0-9]*">
+                            <div class="input-group-addon"><span> = </span><span id="collapse2AchievedInline">4</span></div>
+                          </div>
+                        </div>
+                      </form>
+                      </div>
+                      <div class="col-xs-4 text-center">
+                        <button type="button" class="btn btn-default btn-md" data-type="Achieved" data-num="2" data-action = "-">
+                          <span class="glyphicon glyphicon-minus"></span>
+                        </button>
+                      </div>
+                      <div class="col-xs-4 text-center">
+                        <button type="button" class="btn btn-default btn-md" data-type="Achieved" data-num="2" data-action = "+">
+                          <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <!--end Achieved-->
+
+                    <!--start Total-->
+                    <div class="row">
+                      <div class="col-xs-24" style="margin-bottom: 7px; font-size: 16px;">
+                          <b>Total</b><br/>
+                          <small class="text-muted">(previous + additional = new)</small>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-16">
+                      <form class="form" role="form">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-addon"><span id="collapse2TotalPrev">1</span> + </div>
+                            <input class="form-control" id="collapse2TotalInput" data-type="Total" data-num="2" value="4" style="text-align: center; width: 5em;" type="number" min="0" inputmode="numeric" pattern="[0-9]*">
+                            <div class="input-group-addon"><span> = </span><span id="collapse2TotalInline">5</span></div>
+                          </div>
+                        </div>
+                      </form>
+                      </div>
+                      <div class="col-xs-4 text-center">
+                        <button type="button" class="btn btn-default btn-md" data-type="Total" data-num="2" data-action="-">
+                          <span class="glyphicon glyphicon-minus"></span>
+                        </button>
+                      </div>
+                      <div class="col-xs-4 text-center">
+                        <button type="button" class="btn btn-default btn-md" data-type="Total" data-num="2" data-action="+">
+                          <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <!--end total-->
                   </div>
                 </div>
               </div>
               <div class="panel panel-default">
                 <div class="panel-heading"  data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" >
-                  <h4 class="panel-title">
+                  <h4 class="panel-title" >
                     <a data-toggle="collapse">
                       Males 10 to 14
                     </a>
+                    <span class="pull-right">
+                      <span id="collapse3AchievedSummary">4</span>
+                      <span> / </span>
+                      <span id="collapse3TotalSummary">5</span>
+                    </span>
                   </h4>
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse">
                   <div class="panel-body">
-                    Stuff for panel males 10 to 14
+                      <!--start Achieved-->
+                    <div class="row">
+                      <div class="col-xs-24" style="margin-bottom: 7px; font-size: 16px;">
+                          <b>Achieved</b><br/>
+                          <small class="text-muted">(previous + additional = new)</small>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-16">
+                      <form class="form" role="form">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-addon"><span id="collapse3AchievedPrev">1</span> + </div>
+                            <input class="form-control" id="collapse3AchievedInput" data-type="Achieved" data-num="3" value="3" style="text-align: center; width: 5em;" min="0" max="999" type="number" min="0" inputmode="numeric" pattern="[0-9]*">
+                            <div class="input-group-addon"><span> = </span><span id="collapse3AchievedInline">4</span></div>
+                          </div>
+                        </div>
+                      </form>
+                      </div>
+                      <div class="col-xs-4 text-center">
+                        <button type="button" class="btn btn-default btn-md" data-type="Achieved" data-num="3" data-action = "-">
+                          <span class="glyphicon glyphicon-minus"></span>
+                        </button>
+                      </div>
+                      <div class="col-xs-4 text-center">
+                        <button type="button" class="btn btn-default btn-md" data-type="Achieved" data-num="3" data-action = "+">
+                          <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                      </div>
+                    </div>
+                    <!--end Achieved-->
+
+                    <!--start Total-->
+                    <div class="row">
+                      <div class="col-xs-24" style="margin-bottom: 7px; font-size: 16px;">
+                          <b>Total</b><br/>
+                          <small class="text-muted">(previous + additional = new)</small>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-16">
+                      <form class="form" role="form">
+                        <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-addon"><span id="collapse3TotalPrev">1</span> + </div>
+                            <input class="form-control" id="collapse3TotalInput" data-type="Total" data-num="3" value="4" style="text-align: center; width: 5em;" type="number" min="0" inputmode="numeric" pattern="[0-9]*">
+                            <div class="input-group-addon"><span> = </span><span id="collapse3TotalInline">5</span></div>
+                          </div>
+                        </div>
+                      </form>
+                      </div>
+                      <div class="col-xs-4 text-center">
+                        <button type="button" class="btn btn-default btn-md" data-type="Total" data-num="3" data-action="-">
+                          <span class="glyphicon glyphicon-minus"></span>
+                        </button>
+                      </div>
+                      <div class="col-xs-4 text-center">
+                        <button type="button" class="btn btn-default btn-md" data-type="Total" data-num="3" data-action="+">
+                          <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <!--end total-->
                   </div>
                 </div>
               </div>
