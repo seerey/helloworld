@@ -1,10 +1,18 @@
 $(document).ready(function () {
-  
-  $('input.form-control').on('input propertychange paste', function() {
+
+  $('input').on('input propertychange paste', function() {
     var dataNum = $(this).attr("data-num");
     var dataType = $(this).attr("data-type");
     var text = $(this).val();
+    if ($(this).attr("id") === "collapse" + dataNum + dataType + "Input") {
+      $("#collapse" + dataNum + dataType + "Input2").val(text);
+    }
+    else {
+      $("#collapse" + dataNum + dataType + "Input").val(text);
+    }
+
     refreshTotals(dataNum, dataType, text);
+
     event.stopPropagation();
   });
 
@@ -24,6 +32,7 @@ $(document).ready(function () {
       newNum = num + 1
     }
     $("#collapse" + dataNum + dataType + "Input").val(newNum);
+    $("#collapse" + dataNum + dataType + "Input2").val(newNum);
 
     refreshTotals(dataNum, dataType, newNum)
     event.stopPropagation();
@@ -37,6 +46,7 @@ $(document).ready(function () {
     }
     $("#collapse" + dataNum + dataType + "Summary").text(num);
     $("#collapse" + dataNum + dataType + "Inline").text(num);
+    $("#collapse" + dataNum + dataType + "Inline2").text(num);
   }
 
 
