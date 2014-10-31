@@ -3675,9 +3675,9 @@ tbody.collapse.in {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-  -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
+  -webkit-transition: height 0.10s ease;
+  -o-transition: height 0.10s ease;
+  transition: height 0.10s ease;
 }
 .caret {
   display: inline-block;
