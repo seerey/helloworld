@@ -157,22 +157,27 @@ or more environmental issues confronting the community. </p>
           <!--Phone -->
           <div class="visible-xs" style="margin-left: 4px; margin-right: 4px;">
             <div class="panel-group" id="accordion">
+              <!--Males 0-4-->
               <div class="panel panel-default">
-                <div class="panel-heading"  data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" >
+                <div class="panel-heading"  data-toggle="collapse" data-parent="#accordion" data-target="#collapse1" >
                   <h4 class="panel-title" >
                     <a data-toggle="collapse">
-                      <b>Males 0 to 4</b>
+                      Males 0 to 4
                     </a>
-                    <!-- <button type="button" class="btn btn-default btn-xs" data-parent="#accordion" href="#collapseOne">Males 0-4</button> -->
-                    <span class="pull-right">4 / 5</span>
+                    <span class="pull-right">
+                      <span id="collapse1AchievedSummary">4</span>
+                      <span> / </span>
+                      <span id="collapse1TotalSummary">5</span>
+                    </span>
                   </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
+
+                <div id="collapse1" class="panel-collapse collapse in">
                   <div class="panel-body">
-                    <!--start Achieving-->
+                    <!--start Achieved-->
                     <div class="row">
                       <div class="col-xs-24" style="margin-bottom: 7px; font-size: 16px;">
-                          <b>Achieving</b><br/>
+                          <b>Achieved</b><br/>
                           <small class="text-muted">(previous + additional = new)</small>
                       </div>
                     </div>
@@ -181,25 +186,25 @@ or more environmental issues confronting the community. </p>
                       <form class="form" role="form">
                         <div class="form-group">
                           <div class="input-group">
-                            <div class="input-group-addon">1 + </div>
-                            <input class="form-control" value="3" style="text-align: center; width: 5em;" type="number" min="0" inputmode="numeric" pattern="[0-9]*">
-                            <div class="input-group-addon">= 4</div>
+                            <div class="input-group-addon"><span id="collapse1AchievedPrev">1</span> + </div>
+                            <input class="form-control" id="collapse1AchievedInput" data-type="Achieved" data-num="1" value="3" style="text-align: center; width: 5em;" min="0" max="999" type="number" min="0" inputmode="numeric" pattern="[0-9]*">
+                            <div class="input-group-addon"><span> = </span><span id="collapse1AchievedInline">4</span></div>
                           </div>
                         </div>
                       </form>
                       </div>
                       <div class="col-xs-4 text-center">
-                        <button type="button" class="btn btn-default btn-md">
+                        <button type="button" class="btn btn-default btn-md" data-type="Achieved" data-num="1" data-action = "-">
                           <span class="glyphicon glyphicon-minus"></span>
                         </button>
                       </div>
                       <div class="col-xs-4 text-center">
-                        <button type="button" class="btn btn-default btn-md">
+                        <button type="button" class="btn btn-default btn-md" data-type="Achieved" data-num="1" data-action = "+">
                           <span class="glyphicon glyphicon-plus"></span>
                         </button>
                       </div>
                     </div>
-                    <!--end Achieving-->
+                    <!--end Achieved-->
 
                     <!--start Total-->
                     <div class="row">
